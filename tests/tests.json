@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Open site with two-account follow gate",
+    "sanity": true,
+    "viewport": "mobile",
+    "covers": ["TikTok follow gate", "both TikTok account links", "website access lock"],
+    "description": "Verifies the site opens behind a gate requiring both TikTok follow actions before entry.",
+    "steps": ["Open the app", "Open the @wtf_sarkar79 TikTok button", "Open the @wtf_erenx79 TikTok button"],
+    "expected": "Both accounts are shown and the Enter website button becomes enabled only after both follow buttons are opened."
+  },
+  {
+    "name": "Enter and run device tuner",
+    "viewport": "desktop",
+    "covers": ["gate unlock", "device detection", "FPS benchmark", "refresh estimate", "sensitivity generation"],
+    "description": "Verifies the primary tuner workflow after the access gate is completed.",
+    "steps": ["Complete both TikTok follow actions", "Click Enter website", "Click Detect + test device", "Wait for the benchmark to finish"],
+    "expected": "The tuner opens and shows device facts, benchmark results, and sensitivity values."
+  },
+  {
+    "name": "Rate the website",
+    "viewport": "mobile",
+    "covers": ["star rating", "rating submission", "local rating persistence"],
+    "description": "Verifies the five-star rating component can be selected and submitted.",
+    "steps": ["Complete the two TikTok follow actions", "Enter the website", "Tap the 5-star rating", "Tap Submit rating"],
+    "expected": "Five stars are selectable and submission changes the button to a thank-you state."
+  },
+  {
+    "name": "Switch play style and copy settings",
+    "viewport": "mobile",
+    "covers": ["play style switching", "copy settings"],
+    "description": "Verifies changing play style updates the profile and settings can be copied.",
+    "steps": ["Complete the two TikTok follow actions", "Enter the website", "Run Detect + test device", "Select Rush", "Tap Copy settings"],
+    "expected": "Rush sensitivity values are displayed and the copy button confirms the settings were copied."
+  }
+]
