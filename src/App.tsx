@@ -101,7 +101,7 @@ export default function App() {
 
   const copy = () => {
     if (!s) return;
-    navigator.clipboard?.writeText(Object.entries(s).map(([k, v]) => k + ': ' + v).join('
+    navigator.clipboard?.writeText(Object.entries(s).map(([k, v]) => k + ': ' + v).join('\n'));
 '));
     setCopied(true);
     setTimeout(() => setCopied(false), 1500);
